@@ -13,6 +13,7 @@
       <tr>
         <td><a href="/categories/<%= category.id %>"><%= category.id %></a></td>
         <td><%= category.name %></td>
+	<td><a href="/delete_categories/<%= category.id %>">Remove</a></td>
       </tr>
   <% end %>
   </tbody>

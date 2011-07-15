@@ -51,3 +51,9 @@ post '/categories_update' do
 		redirect('/categories')
 	end
 end
+
+get '/delete_categories/:id' do |id|
+	@category = Category.get(id)
+	@category.destroy
+	redirect('/categories')
+end
