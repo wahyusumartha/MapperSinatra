@@ -3,6 +3,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 require 'sinatra'
 require 'partials'
 require 'dm'
+require 'sinatra/url_for'
 
 include Sinatra::Partials
 
