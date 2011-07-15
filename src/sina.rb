@@ -19,7 +19,7 @@ end
 get '/categories/:id' do |n|
   @title = "Categories Detail"
   @category = Category.get(n)
-  erb :'categories/show'
+  erb :'categories/update'
 end
 
 get '/categories' do
@@ -39,4 +39,15 @@ post '/categories' do
     @message = "Save Failed, Please Try Again :D " + e.to_s
     erb :'categories/new'
   end
+end
+
+post '/categories_update' do 
+	@category = Category.get(params[:id])
+	begin 
+		@category.update :name => params[:name]
+		redirect('/categories')
+	rescue DataMapper::UpdateConflictError => e 
+		@message = "Update Failed, " + e.to_s
+		redirect('/categories')
+	end
 end

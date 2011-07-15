@@ -1,0 +1,10 @@
+<% if (not @category.nil?) %>
+<form action="/categories_update" method="post">
+  <input type="hidden" name="id" value="<%= @category.id %>"/>
+  <label for="name">Name : </label><br/>
+  <input type="text" name="name" id="name" value="<%= @category.name %>"/><br/>
+  <input type="submit" value="Update"/>
+</form>
+<% else %>
+	<h1> Invalid Data </h1>
+<% end %>

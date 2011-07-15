@@ -7,7 +7,7 @@ DataMapper.setup(:default, {
     :adapter => 'mysql',
     :host => 'localhost',
     :username => 'root',
-    :password => 'localhost',
+    :password => '',
     :database => 'dmtest'})
 
 
