@@ -1,0 +1,10 @@
+<html>
+<head>
+  <title><%= @title ? "Sinatra DataMapper | "+@title :"Sinatra DataMapper" %></title>
+  <%= partial(:scripts) %>
+</head>
+<body>
+<div><%= @message ||= "" %></div>
+<%= yield %>
+</body>
+</html>

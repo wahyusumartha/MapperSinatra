@@ -1,0 +1,16 @@
+<% if (not @category.nil?) %>
+    <table>
+      <tbody>
+      <tr>
+        <td>Id :</td>
+        <td><%= @category.id %></td>
+      </tr>
+      <tr>
+        <td>Name :</td>
+        <td><%= @category.name %></td>
+      </tr>
+      </tbody>
+    </table>
+<% else %>
+    <h1>Not Found!</h1>
+<% end %>

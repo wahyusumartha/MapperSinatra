@@ -1,0 +1,24 @@
+<h1>Categories Index</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <% @categories.each do |category| %>
+      <tr>
+        <td><a href="/categories/<%= category.id %>"><%= category.id %></a></td>
+        <td><%= category.name %></td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="2"><a href="/categories/new">New</a></td>
+  </tr>
+  </tfoot>
+</table>
